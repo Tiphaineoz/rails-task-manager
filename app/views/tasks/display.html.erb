@@ -1,8 +1,13 @@
 <div class="container col-6">
-<h1>Task details view for : <%= @task.title %></h1>
-<p><%= @task.details %></p>
-<label for="checkbox">Completed</label>
-<input id="checkbox" type="checkbox" <%= @task.completed ? "checked" : "" %>>
+<h1><%= @task.title %></h1>
+<p class="details"><%= @task.details %></p>
+
+<div>
+  <label for="checkbox">Completed</label>gst
+  
+  <input id="checkbox" type="checkbox" <%= @task.completed ? "checked" : "" %>>
+</div>
+
 <%= link_to "Back to list", tasks_path %>
 <%= link_to "Edit the task", edit_path %>
 </div>

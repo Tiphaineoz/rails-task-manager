@@ -8,10 +8,11 @@
   <%= t.label :details %>
   <%= t.text_field :details %>
   <%= t.submit %>
-<% if params[:action] != "new" %>
-    <%= t.check_box :completed %> 
-    <%= t.label :completed %>;
- <% end %>
+
+    <% if params[:action] != "new" %>
+        <%= t.check_box :completed %> 
+        <%= t.label :completed %>;
+    <% end %>
 <% end %>
 
 <%= link_to "Back to list", tasks_path %>
